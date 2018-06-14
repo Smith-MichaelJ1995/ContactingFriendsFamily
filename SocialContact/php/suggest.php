@@ -45,9 +45,9 @@
 					       //print <tr>
 						   if($rowCount % 3 == 0){$suggestion .= '<tr>';}
 						  
-						   $suggestion .= '<td style="text-align:left;"> <h3>'.$ccListOBJ['name'].'</h3><small><b>Birthday:</b>'. $ccListOBJ['birthday'].' <br>
+						   $suggestion .= '<td style="text-align:center;"> <h3>'.$ccListOBJ['name'].'</h3><small><b>Birthday:</b>'. $ccListOBJ['birthday'].' <br>
 						   <b>Contact Source:</b> '.$ccListOBJ['contactCode'].'
-						   <p style="text-align:left;">
+						   <p style="text-align:center;">
 								<b>Target Date:</b> '.$ccListOBJ['targetDate'].' <br>
 						   </p>
 						    
@@ -73,9 +73,9 @@
 						   //print <tr>
 						   if($rowCount % 3 == 0){$suggestion .= '<tr>';}
 						  
-						   $suggestion .= '<td style="text-align:left;"> <h3>'.$ccListOBJ['name'].'</h3><small><b>Birthday:</b>'. $ccListOBJ['birthday'].' <br>
+						   $suggestion .= '<td style="text-align:center;"> <h3>'.$ccListOBJ['name'].'</h3><small><b>Birthday:</b>'. $ccListOBJ['birthday'].' <br>
 						   <b>Contact Source:</b> '.$ccListOBJ['contactCode'].'
-						   <p style="text-align:left;">
+						   <p style="text-align:center;">
 								<b>Target Date:</b> '.$ccListOBJ['targetDate'].' <br>
 						   </p>
 						    
@@ -97,9 +97,9 @@
 						   //print <tr>
 						   if($rowCount % 3 == 0){$suggestion .= '<tr>';}
 						  
-						   $suggestion .= '<td style="text-align:left;"> <h3>'.$ccListOBJ['name'].'</h3><small><b>Birthday:</b>'. $ccListOBJ['birthday'].' <br>
+						   $suggestion .= '<td style="text-align:center;"> <h3>'.$ccListOBJ['name'].'</h3><small><b>Birthday:</b>'. $ccListOBJ['birthday'].' <br>
 						   <b>Contact Source:</b> '.$ccListOBJ['contactCode'].'
-						   <p style="text-align:left;">
+						   <p style="text-align:center;">
 								<b>Target Date:</b> '.$ccListOBJ['targetDate'].' <br>
 						   </p>
 						    
@@ -122,9 +122,9 @@
 						   //print <tr>
 						   if($rowCount % 3 == 0){$suggestion .= '<tr>';}
 						  
-						   $suggestion .= '<td style="text-align:left;"> <h3>'.$ccListOBJ['name'].'</h3><small><b>Birthday:</b>'. $ccListOBJ['birthday'].' <br>
+						   $suggestion .= '<td style="text-align:center;"> <h3>'.$ccListOBJ['name'].'</h3><small><b>Birthday:</b>'. $ccListOBJ['birthday'].' <br>
 						   <b>Contact Source:</b> '.$ccListOBJ['contactCode'].'
-						   <p style="text-align:left;">
+						   <p style="text-align:center;">
 								<b>Target Date:</b> '.$ccListOBJ['targetDate'].' <br>
 						   </p>
 						    
@@ -145,9 +145,9 @@
 						   //print <tr>
 						   if($rowCount % 3 == 0){$suggestion .= '<tr>';}
 						  
-						   $suggestion .= '<td style="text-align:left;"> <h3>'.$ccListOBJ['name'].'</h3><small><b>Birthday:</b>'. $ccListOBJ['birthday'].' <br>
+						   $suggestion .= '<td style="text-align:center;"> <h3>'.$ccListOBJ['name'].'</h3><small><b>Birthday:</b>'. $ccListOBJ['birthday'].' <br>
 						   <b>Contact Source:</b> '.$ccListOBJ['contactCode'].'
-						   <p style="text-align:left;">
+						   <p style="text-align:center;">
 								<b>Target Date:</b> '.$ccListOBJ['targetDate'].' <br>
 						   </p>
 						    
