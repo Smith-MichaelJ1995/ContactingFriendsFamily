@@ -39,7 +39,6 @@
 				<tr>
 					<th>Name</th>
 					<th>Birthday</th>
-					<th>Timespan</th>
 					<th>Contact Code</th>
 					<th>Target Date</th>
 				</tr>
@@ -51,7 +50,6 @@
 				<tr>
 					<th>Name</th>
 					<th>Birthday</th>
-					<th>Timespan</th>
 					<th>Contact Code</th>
 					<th>Target Date</th>
 				</tr>
