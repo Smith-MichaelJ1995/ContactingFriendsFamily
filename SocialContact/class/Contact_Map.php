@@ -335,7 +335,6 @@
 				<tr>
 					<td>".$person['name']."</td>
 					<td><p style=\"color: red;\">".$person['birthday']."</p></td>
-					<td>".$person['timespan']."</td>
 					<td>".$person['contactCode']."</td>
 					<td>".$person['targetDate']."</td>
 				</tr>
