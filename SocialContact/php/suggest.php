@@ -1,5 +1,4 @@
 <?php
-
 	//include functions on page
 	require $_SERVER["DOCUMENT_ROOT"]."/SocialContact/class/Contact_Map.php";
 	
@@ -168,8 +167,6 @@
 			
 	   }
    }
-
    
    echo $suggestion === "" ? "No Suggestion" : $suggestion;
-
 ?>

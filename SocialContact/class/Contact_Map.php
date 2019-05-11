@@ -295,6 +295,43 @@
 		   
 		   //return birthdays for today
 			return $birthdays;
+		 }
+		 
+
+		 //return birthday's for today
+	   function returnThisMonthsBirthdays()
+	   {
+		    //open database connection
+		   $fullAddressBook = $this->retAllRecords();
+		   
+		   //get today's date
+		   $today = date("Y/m/d");
+		   
+		   //data structure to store all birthday objects 
+		   $birthdays = array();
+		   
+		   foreach ( $fullAddressBook as $cTact ) {
+			   
+			   //acquire birthday month + day for this record
+				$dateArr = explode('-', $cTact['birthday']);
+				
+				
+			   //acquire date for today
+			    $todaysDate = explode('/', date('Y/m/d', strtotime($today)));
+				
+				//compare if month's match
+				if($dateArr[1] == $todaysDate[1])
+				{
+					//if birthday month, add to list
+					$birthdays[] = $cTact;
+				}
+				
+		   }
+		   
+		   
+		   
+		   //return birthdays for today
+			return $birthdays;
 	   }
 	   
 	   //return timespan string
@@ -325,7 +362,7 @@
 	   function returnBirthdayString() {
 		  
 		   //birthday object
-		   $birthdayRecords = $this->returnTodayBirthdays();
+			 $birthdayRecords = $this->returnTodayBirthdays();
 		   
 		   //email string to be returned
 		   $email_string = "";
@@ -344,7 +381,32 @@
 		   //return print string
 		   return $email_string;
 		   
-	   }
+		 }
+		 
+
+		//  return this months birthday
+		function returnBirthdayMonthsString() {
+
+				//birthday object
+				$birthdayRecords = $this->returnThisMonthsBirthdays();
+		   
+				//email string to be returned
+				$email_string = "";
+				
+				foreach($birthdayRecords as $person){
+					 $email_string .= "
+				 <tr>
+					 <td>".$person['name']."</td>
+					 <td><p style=\"color: red;\">".$person['birthday']."</p></td>
+					 <td>".$person['contactCode']."</td>
+					 <td>".$person['targetDate']."</td>
+				 </tr>
+				 \n";
+					}
+				
+				//return print string
+				return $email_string;
+		}
 	   
    }
   

@@ -8,7 +8,7 @@
    
    //work on sending email
 	$to = "michaeljoshuasmith1@gmail.com";
-	$subject = "Birthdays & People To Contact: ". date("M d Y");
+	$subject = "Birthdays Today: ". date("M d Y");
 	$txt = '
 	<html>
 		<head>
@@ -34,18 +34,21 @@
 		</style>
 		</head>
 		<body>
-			<h1>People To Contact Today:</h1>
-			<table style="border: 1px solid #000;">
-				<tr>
-					<th>Name</th>
-					<th>Birthday</th>
-					<th>Contact Code</th>
-					<th>Target Date</th>
-				</tr>
-				'.$contact->returnTimespanString().'
-			</table>
+
+		<h1>Today\'s Birthdays:</h1>
+		<table style="border: 1px solid #000;">
+			<tr>
+				<th>Name</th>
+				<th>Birthday</th>
+				<th>Contact Code</th>
+				<th>Target Date</th>
+			</tr>
+			'.$contact->returnBirthdayString().'
+		</table>
+
 			<br>
-			<h1>Today\'s Birthdays:</h1>
+
+			<h1>Birthdays This Month:</h1>
 			<table style="border: 1px solid #000;">
 				<tr>
 					<th>Name</th>
@@ -53,8 +56,9 @@
 					<th>Contact Code</th>
 					<th>Target Date</th>
 				</tr>
-				'.$contact->returnBirthdayString().'
+				'.$contact->returnBirthdayMonthsString().'
 			</table>
+			
 		</body>
 	</html>';
 	
@@ -63,15 +67,30 @@
 	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 	$headers .= "From: testsender1995@gmail.com" . "\r\n";
 
-	if(mail($to,$subject,$txt,$headers))
+	if( $contact->returnBirthdayString() != "" )
 	{
-		echo 'PASS';
-		//close page via javascript
-	    echo '<script type="text/javascript">window.close();</script>';
+
+		if(	mail($to,$subject,$txt,$headers) ) {
+			
+			echo 'BIRTHDAY TODAY: ', $contact->returnBirthdayString();
+
+			echo '<h1><a href="http://localhost/SocialContact/php/updateDB.php">Download Database File</a></h1>';
+			
+			echo '<h1><a href="https://drive.google.com/drive/u/0/folders/1fu5UcVFs_XP3HT0h4PvfvytieAFAet4K?ogsrc=32">Google Drive Backup</a></h1>';
+			
+		
+			//close page via javascript
+			echo '<script>window.close();</script>';
+		}
+		else
+		{
+			echo 'ERROR';
+		}
+		
 	}
 	else
 	{
-		echo 'FAIL';
+		echo '<script>window.close();</script>';
 	}
     
 
